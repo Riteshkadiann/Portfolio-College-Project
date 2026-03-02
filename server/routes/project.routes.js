@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { list, create, read, update, remove, removeAll } from '../controllers/project.controller.js';
+const r = Router();
+r.get('/projects', list);
+r.get('/projects/:id', read);
+r.post('/projects', create);
+r.put('/projects/:id', update);
+r.delete('/projects/:id', remove);
+r.delete('/projects', removeAll);
+export default r;

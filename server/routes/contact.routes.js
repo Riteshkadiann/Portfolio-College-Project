@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { list, create, read, update, remove, removeAll } from '../controllers/contact.controller.js';
+const r = Router();
+r.get('/contacts', list);
+r.get('/contacts/:id', read);
+r.post('/contacts', create);
+r.put('/contacts/:id', update);
+r.delete('/contacts/:id', remove);
+r.delete('/contacts', removeAll);
+export default r;

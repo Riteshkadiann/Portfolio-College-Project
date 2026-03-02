@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { list, create, read, update, remove, removeAll } from '../controllers/user.controller.js';
+const r = Router();
+r.get('/users', list);
+r.get('/users/:id', read);
+r.post('/users', create);
+r.put('/users/:id', update);
+r.delete('/users/:id', remove);
+r.delete('/users', removeAll);
+export default r;

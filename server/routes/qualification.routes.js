@@ -1,0 +1,10 @@
+import { Router } from 'express';
+import { list, create, read, update, remove, removeAll } from '../controllers/qualification.controller.js';
+const r = Router();
+r.get('/qualifications', list);
+r.get('/qualifications/:id', read);
+r.post('/qualifications', create);
+r.put('/qualifications/:id', update);
+r.delete('/qualifications/:id', remove);
+r.delete('/qualifications', removeAll);
+export default r;
